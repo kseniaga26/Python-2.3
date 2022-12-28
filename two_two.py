@@ -128,14 +128,21 @@ def get_statistic(result, index, new_message, slice=0, reverse=False):
     print(f'{new_message}{str(statistic)}')
     return statistic
 
-# def get_date_1(date):
-#     new_date = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S%z')
-#     return int(new_date.strftime('%Y'))
+ #def get_date_1(date):
+ #    new_date = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S%z')
+ #    return int(new_date.strftime('%Y'))
 
 # def get_date_2(date) -> int:
 #    return int(date.split("T")[0].split("-")[0])
 
 def get_date_3(date):
+    """ Функция для вывода года публикации вакансии в правильном формате.
+
+        Args:
+            date (str): Дата публикации вакансии
+        Returns:
+            int: Отформатированная дата
+        """
     return int(date[:4])
 
 def get_vacancies_statistic(vacs_list: List[Vacancy], fields, vac_name: str = ''):
